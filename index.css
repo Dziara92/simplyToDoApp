@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #31373e;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  background-color: #161a22;
+  width: 400px;
+  min-height: 400px;
+  padding: 30px 20px;
+  border-radius: 20px;
+}
+/* h1 */
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+/* Form */
+.container__input {
+  width: 90%;
+  margin: 0 auto 30px auto;
+}
+
+/* Form Input */
+form input {
+  padding: 10px 5px;
+  border: none;
+  border-radius: 20px;
+  font-family: "Montserrat";
+}
+form input:focus {
+  outline: none;
+}
+/* Form Btn */
+.addTask {
+  font-family: "Montserrat";
+  padding: 10px 5px;
+  border-radius: 20px;
+  margin-left: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: lowercase;
+  color: white;
+  border: none;
+  background-color: rgb(244, 144, 47);
+  background: linear-gradient(
+    22deg,
+    rgba(244, 144, 47, 1) 48%,
+    rgba(252, 172, 99, 1) 100%
+  );
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.addTask:hover {
+  -webkit-box-shadow: 0px 0px 35px -2px rgba(244, 144, 47, 0.42);
+  -moz-box-shadow: 0px 0px 35px -2px rgba(244, 144, 47, 0.42);
+  box-shadow: 0px 0px 35px -2px rgba(244, 144, 47, 0.42);
+}
+
+/* Your Tasks */
+h3 {
+  color: rgb(199, 199, 199);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.task {
+  display: flex;
+  align-items: center;
+  background-color: #1e232f;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 12px;
+}
+li {
+  color: #ffffff;
+  width: 70%;
+  font-size: 14px;
+  font-weight: 600;
+  list-style: none;
+  margin-right: 30px;
+}
+
+.checkedBtn,
+.deleteBtn {
+  font-family: "Montserrat";
+  border: none;
+  border-radius: 20px;
+  padding: 10px 5px;
+  margin-left: 10px;
+  color: white;
+}
+
+.deleteBtn {
+  background-color: #e10000;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.deleteBtn:hover {
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(225, 0, 0, 0.32);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(225, 0, 0, 0.32);
+  box-shadow: 0px 0px 24px 0px rgba(225, 0, 0, 0.32);
+}
+
+.checkedBtn {
+  background-color: #b561fa;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.checkedBtn:hover {
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(181, 97, 250, 0.32);
+  -moz-box-shadow: 0px 0px 24px 0px rgba(181, 97, 250, 0.32);
+  box-shadow: 0px 0px 24px 0px rgba(181, 97, 250, 0.32);
+}
