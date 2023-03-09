@@ -15,8 +15,11 @@ addTaskBtn.addEventListener("click", addToDoTask);
 function addToDoTask(e) {
   e.preventDefault();
   const taskValue = input.value;
+  const whiteSpaceCheck = /^\s*$/.test(taskValue);
 
-  if (!taskValue) {
+  console.log(whiteSpaceCheck);
+
+  if (!taskValue || whiteSpaceCheck === true) {
     warrning.classList.add("showworning");
     return;
   } else {
@@ -49,9 +52,7 @@ const displayTasks = () => {
 
 const chcekedTask = (checkedBtn) => {
   checkedBtn.forEach((btn) =>
-    btn.addEventListener("click", (e) => {
-      let btnItem = e.target;
-      console.log(btnItem);
+    btn.addEventListener("click", () => {
       btn.classList.toggle("green");
     })
   );
@@ -64,7 +65,7 @@ const deleteTask = (index) => {
 };
 
 const deleteAllTasks = () => {
-  if (tasks.length < 1) {
+  if (tasks.length <= 2) {
     clearAllTasks.classList.remove("showtrash");
     deleteAllP.classList.remove("showDeleteAll");
     return;
